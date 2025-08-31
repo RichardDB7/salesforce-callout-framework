@@ -31,15 +31,3 @@ tests (clases de test con mocks)
 El framework incluye ejemplos de test con `HttpCalloutMock` para simular servicios externos sin hacer callouts reales.
 
 
-📦 Ejemplo de uso
-
-IL_CalloutManager_cls cm = new IL_CalloutManager_cls('ExampleCustomSetting');
-cm.setUrlParams(new Map<String, String>{ 'dni' => '12345678' });
-IL_HttpResponse_cls res = cm.doCallout();
-if (!res.isError()) {
-    System.debug('✅ Data: ' + res.getData());
-} else {
-    System.debug('❌ Error: ' + res.getMensajeError());
-}
-
-
